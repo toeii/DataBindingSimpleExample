@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+        <import type="android.view.View" />
+
+        <variable name="visible" type="boolean"/>
+        <variable name="user" type="com.toeii.databinding.User"/>
+    </data>
+
+    <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".MainActivity"
+            android:gravity="center"
+    >
+
+        <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:visibility="@{visible ? View.VISIBLE : View.GONE}"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="20dp"
+                android:text="@{user.name}"
+        />
+
+
+
+    </LinearLayout>
+</layout>
